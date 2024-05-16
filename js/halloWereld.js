@@ -74,6 +74,9 @@ function check_input() {
         // Check of de gebruiker nog pogingen over heeft
         if (pogingen <= 0) {
             text_foutmelding.textContent = "Helaas dat is fout, je hebt geen pogingen meer om het te proberen."
+            default_number()
+            generate_player()
+            userInput.value = ""
         } 
         // Check antwoord gebruiker met correct antwoord
         else if (antwoord_gebruiker !== actieveVraag.correct_answer) {
