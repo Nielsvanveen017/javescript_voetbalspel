@@ -11,13 +11,18 @@
     <article>
         <section>
             <h1>Raad de voetballer</h1>
-            <img id="playerDetails" src="/Images/Bellingham.svg">     
+
+            <img id="playerDetails" src="/Images/Bellingham.svg">   
+
             <p>Pogingen: <span id="id_pogingen">...</span></p>
+
             <section class="input-class">
-                <input type="text" id="userInput" placeholder="Voer hier iets in">
+                <input type="text" id="userInput" onchange="changeUserInput()" placeholder="Voer hier iets in">
                 <button>Verzenden</button>
             </section>
+
             <p id="id_foutmelding"> </p>
+
             <a href="/index.html">Zero state</a>
     
         </section>
