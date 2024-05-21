@@ -14,7 +14,24 @@
     {
         "image": "../Images/haaland.svg",
         "correct_answer": "Haaland"
+    },
+    {
+        "image": "../Images/salah.svg",
+        "correct_answer": "Salah"
+    },
+    {
+        "image": "../Images/debruyne.svg",
+        "correct_answer": "De Bruyne"
+    },
+    {
+        "image": "../Images/kroos.svg",
+        "correct_answer": "Kroos"
+    },
+    {
+        "image": "../Images/wirtz.svg",
+        "correct_answer": "Wirtz"
     }
+
 
 
 ]
