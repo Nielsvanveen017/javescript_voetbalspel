@@ -14,9 +14,9 @@ let questions = [];
 // standaard leeg antwoord voor de gebruiker zodat deze later gevuld kan worden met de input van de gebruiker
 let antwoord_gebruiker = ""
 let pogingen = 3;
-
-
 let actieveVraag = {}
+
+
 
 // Haal de data van de vragen op uit het json bestand (ChatGPT en collega)
 fetch('../questions.json')
@@ -63,6 +63,11 @@ function changeUserInput() {
     antwoord_gebruiker = userInput.value;
 }
 
+function playMusic(audioFilePath) {
+    let audio = new Audio(audioFilePath);
+    audio.play();
+}
+
 // Functie om user input te checken
 function check_input() {
     // Check of de actieve vraag is gezet en niet leeg is -> check data succesvol opgehaald
@@ -86,17 +91,19 @@ function check_input() {
         else {
             text_foutmelding.textContent = "Gefeliciteerd, jouw antwoord was goed";
             text_foutmelding.style.color = '#32D74B'
+            playMusic("../sound-effects/correct.mp3") 
             default_number()
             generate_player()
             userInput.value = ""
+            
         }
     }
 }
 
+
 default_number()
 
 checkButton.addEventListener("click", function () {
-    // veranderPogingen() 
     check_input()
 })
 
