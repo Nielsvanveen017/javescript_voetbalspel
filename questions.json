@@ -6,5 +6,15 @@
     {
         "image": "../Images/simons.svg",
         "correct_answer": "Xavi Simons"
+    },
+    {
+        "image": "../Images/mbape.svg",
+        "correct_answer": "Mbape"
+    },
+    {
+        "image": "../Images/haaland.svg",
+        "correct_answer": "Haaland"
     }
+
+
 ]
