@@ -90,12 +90,8 @@ function check_input() {
         }
     }
 }
-// Functie aanroepen zodat hij getoond wordt
-default_number()
 
-// Verander het aantal pogingen pas wanneer de gebruiker op de knop drukt
-// checkButton.addEventListener("click", veranderPogingen);
-// checkButton.addEventListener("click", check_input);
+default_number()
 
 checkButton.addEventListener("click", function () {
     // veranderPogingen() 
