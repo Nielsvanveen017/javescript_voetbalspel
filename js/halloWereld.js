@@ -73,11 +73,12 @@ function check_input() {
     // Check of de actieve vraag is gezet en niet leeg is -> check data succesvol opgehaald
     if (actieveVraag) {
         // Check of de gebruiker nog pogingen over heeft
-        if (pogingen <= 0) {
+        if (pogingen <= 1) {
             text_foutmelding.textContent = "Helaas dat is fout, je hebt geen pogingen meer om het te proberen."
             text_foutmelding.style.color = '#EE2424'
             default_number()
             generate_player()
+            playMusic("../sound-effects/geenPogingen.mp3") 
             // Resetten van user input (zodat input leeg wordt)
             userInput.value = ""
         } 
@@ -86,6 +87,7 @@ function check_input() {
             veranderPogingen()
             text_foutmelding.textContent = "Helaas dat is fout, je hebt nog " + pogingen + " pogingen om het te proberen."
             text_foutmelding.style.color = '#EE2424'
+            playMusic("../sound-effects/wrong.mp3") 
         } 
         // geef correct antwoord als dit geraden is
         else {
