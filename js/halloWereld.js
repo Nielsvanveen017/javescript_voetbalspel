@@ -70,6 +70,7 @@ function check_input() {
         // Check of de gebruiker nog pogingen over heeft
         if (pogingen <= 0) {
             text_foutmelding.textContent = "Helaas dat is fout, je hebt geen pogingen meer om het te proberen."
+            text_foutmelding.style.color = '#EE2424'
             default_number()
             generate_player()
             // Resetten van user input (zodat input leeg wordt)
@@ -79,6 +80,7 @@ function check_input() {
         else if (antwoord_gebruiker !== actieveVraag.correct_answer) {
             veranderPogingen()
             text_foutmelding.textContent = "Helaas dat is fout, je hebt nog " + pogingen + " pogingen om het te proberen."
+            text_foutmelding.style.color = '#EE2424'
         } 
         // geef correct antwoord als dit geraden is
         else {
