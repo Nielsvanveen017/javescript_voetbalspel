@@ -41,7 +41,7 @@ const questions = [
 // standaard leeg antwoord voor de gebruiker zodat deze later gevuld kan worden met de input van de gebruiker
 const antwoordGebruiker = ""
 const pogingen = 3;
-const randomVraag;
+const randomVraag = {};
 const actieveVraag = {};
 
 // Een functie die zonder op de knop te drukken aangeeft hoeveel pogingen de gebruiker nog over heeft
