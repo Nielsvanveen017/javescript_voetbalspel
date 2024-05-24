@@ -118,3 +118,11 @@ p {
      font-size: 18px;
 }
 
+#hint{
+    color:#007CFF;
+    display: none;
+}
+
+.verberg-element{
+    visibility: hidden;
+}
