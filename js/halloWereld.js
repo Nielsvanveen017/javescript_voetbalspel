@@ -39,7 +39,7 @@ const questions = [
 ];
 
 // standaard leeg antwoord voor de gebruiker zodat deze later gevuld kan worden met de input van de gebruiker
-const antwoordGebruiker = ""
+const antwoordGebruiker = "";
 const pogingen = 3;
 const randomVraag = {};
 const actieveVraag = {};
