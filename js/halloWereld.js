@@ -80,14 +80,16 @@ function check_input() {
             generate_player()
             playMusic("../sound-effects/geenPogingen.mp3") 
             // Resetten van user input (zodat input leeg wordt)
-            userInput.value = ""
+            userInput.value = "";
+            timeoutDuration = 3500;
         } 
         // Check antwoord gebruiker met correct antwoord
         else if (antwoord_gebruiker !== actieveVraag.correct_answer) {
             veranderPogingen()
             text_foutmelding.textContent = "Helaas dat is fout, je hebt nog " + pogingen + " pogingen om het te proberen."
             text_foutmelding.style.color = '#EE2424'
-            playMusic("../sound-effects/wrong.mp3") 
+            playMusic("../sound-effects/wrong.mp3")
+            timeoutDuration = 3000; 
         } 
         // geef correct antwoord als dit geraden is
         else {
@@ -96,16 +98,16 @@ function check_input() {
             playMusic("../sound-effects/correct.mp3") 
             default_number()
             generate_player()
-            userInput.value = ""
+            userInput.value = "";
+            timeoutDuration = 2000;
         }
 
-        // Zorg ervoor dat de foutmelding of melding wanneer het antwoord goed is verdwijnd na 5 seconde
+        // Zorg ervoor dat de melding verdwijnd. Dit is verschillend per type foutmelding, waardoor ik timeoutDuration heb gebruikt
         setTimeout(() => {
             text_foutmelding.textContent = "";
-        }, 5000);
+        }, timeoutDuration);
     }
 }
-
 
 default_number()
 
