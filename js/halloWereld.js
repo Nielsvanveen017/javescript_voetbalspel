@@ -97,8 +97,12 @@ function check_input() {
             default_number()
             generate_player()
             userInput.value = ""
-            
         }
+
+        // Zorg ervoor dat de foutmelding of melding wanneer het antwoord goed is verdwijnd na 5 seconde
+        setTimeout(() => {
+            text_foutmelding.textContent = "";
+        }, 5000);
     }
 }
 
