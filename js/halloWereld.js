@@ -1,13 +1,13 @@
 // Ophalen foutmelding en knop
 const textFoutmelding = document.getElementById("id_foutmelding");
-let checkButton = document.querySelector("button");
-let userInput = document.getElementById("userInput");
+const checkButton = document.querySelector("button");
+const userInput = document.getElementById("userInput");
 
 // Ophalen data speler
-let afbeeldingSpeler = document.getElementById("playerDetails");
-let getalPogingen = document.getElementById("id_pogingen");
+const afbeeldingSpeler = document.getElementById("playerDetails");
+const getalPogingen = document.getElementById("id_pogingen");
 
-let questions = [
+const questions = [
     {
         "image": "../Images/Bellingham.svg",
         "correct_answer": "Jude Bellingham"
@@ -39,10 +39,10 @@ let questions = [
 ];
 
 // standaard leeg antwoord voor de gebruiker zodat deze later gevuld kan worden met de input van de gebruiker
-let antwoordGebruiker = ""
-let pogingen = 3;
-let randomVraag;
-let actieveVraag = {};
+const antwoordGebruiker = ""
+const pogingen = 3;
+const randomVraag;
+const actieveVraag = {};
 
 // Een functie die zonder op de knop te drukken aangeeft hoeveel pogingen de gebruiker nog over heeft
 function defaultNumber() {
@@ -74,7 +74,7 @@ function generatePlayer() {
 }
 
 function playMusic(audioFilePath) {
-    let audio = new Audio(audioFilePath);
+    const audio = new Audio(audioFilePath);
     audio.play();
 }
 
