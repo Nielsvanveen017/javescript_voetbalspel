@@ -7,6 +7,7 @@ const userInput = document.getElementById("userInput");
 const afbeeldingSpeler = document.getElementById("playerDetails");
 const getalPogingen = document.getElementById("id_pogingen");
 const questions = [
+    // Zie bronnenlijst voor bronnen
     {
         "image": "../Images/Bellingham.svg",
         "correct_answer": "Jude Bellingham"
@@ -69,7 +70,8 @@ function generatePlayer() {
     actieveVraag = questions[randomVraag];
     afbeeldingSpeler.src = actieveVraag.image;
 }
-// Bron staat in bronnen
+
+// Bron: https://www.youtube.com/watch?v=3xlws5og44U 
 function playMusic(audioFilePath) {
     const audio = new Audio(audioFilePath);
     audio.play();
@@ -91,19 +93,19 @@ function checkInput() {
     // Check of de gebruiker nog pogingen over heeft
     if (pogingen <= 1) {
         feedback("Helaas dat is fout, je hebt geen pogingen meer om het te proberen.", "#EE2424", 3500);
-        playMusic("../sound-effects/geenPogingen.mp3");
+        playMusic("../sound-effects/geenPogingen.mp3"); // Bron: https://www.youtube.com/watch?v=hL9bvUYncHs  
         generatePlayer();
     } 
     // Check antwoord gebruiker met correct antwoord
     else if (antwoordGebruiker !== actieveVraag.correct_answer) {
         veranderPogingen();
         feedback("Helaas dat is fout, je hebt nog " + pogingen + " pogingen om het te proberen.", "#EE2424", 3000 );
-        playMusic("../sound-effects/wrong.mp3");
+        playMusic("../sound-effects/wrong.mp3"); // Bron: https://www.youtube.com/watch?v=2naim9F4010  
     } 
     // geef correct antwoord als dit geraden is
     else {
         feedback("Gefeliciteerd, jouw antwoord was goed", '#32D74B', 2000);
-        playMusic("../sound-effects/correct.mp3");
+        playMusic("../sound-effects/correct.mp3"); // Bron: https://www.youtube.com/watch?v=ZvlvhIpcflA  
         generatePlayer();
     }
 }
