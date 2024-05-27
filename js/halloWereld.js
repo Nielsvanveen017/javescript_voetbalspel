@@ -51,8 +51,6 @@ function defaultNumber() {
 
 // Met behulp van deze functie verander je het aantal pogingen in de HTMl
 function veranderPogingen() {
-    console.log("verander pogingen functie");
-    console.log("pogingen: " + pogingen);
     if (pogingen > 0) {
         pogingen--;
         getalPogingen.textContent = pogingen;
