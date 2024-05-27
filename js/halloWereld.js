@@ -6,7 +6,6 @@ const userInput = document.getElementById("userInput");
 // Ophalen data speler
 const afbeeldingSpeler = document.getElementById("playerDetails");
 const getalPogingen = document.getElementById("id_pogingen");
-
 const questions = [
     {
         "image": "../Images/Bellingham.svg",
@@ -38,11 +37,11 @@ const questions = [
     }
 ];
 
-// standaard leeg antwoord voor de gebruiker zodat deze later gevuld kan worden met de input van de gebruiker
-const antwoordGebruiker = "";
-const pogingen = 3;
-const randomVraag = {};
-const actieveVraag = {};
+// Standaard leeg antwoord voor de gebruiker zodat deze later gevuld kan worden met de input van de gebruiker --> veranderd nog dus let
+let antwoordGebruiker = "";
+let pogingen = 3;
+let randomVraag = {};
+let actieveVraag = {};
 
 // Een functie die zonder op de knop te drukken aangeeft hoeveel pogingen de gebruiker nog over heeft
 function defaultNumber() {
@@ -72,7 +71,7 @@ function generatePlayer() {
     actieveVraag = questions[randomVraag];
     afbeeldingSpeler.src = actieveVraag.image;
 }
-
+// Bron staat in bronnen
 function playMusic(audioFilePath) {
     const audio = new Audio(audioFilePath);
     audio.play();
